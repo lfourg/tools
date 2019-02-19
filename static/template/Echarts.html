@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      margin:0;
+      border:0;
+    }
+    #container {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+    }
+  </style>
+</head>
+<body>
+<div id="container"></div>
+</body>
+<script type='text/javascript' src='//echarts.baidu.com/examples/vendors/echarts/echarts.min.js'></script>
+<script>
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('container'));
+  // 指定图表的配置项和数据
+  var option = {
+      backgroundColor: '#fff',
+      title: {
+          text: ''
+      },
+      legend: {
+          data: []
+      },
+      series: []
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</html>

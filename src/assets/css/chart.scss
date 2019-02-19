@@ -1,0 +1,100 @@
+.navigation {
+  width: 160px;
+  background: $darkGrey;
+  position: fixed !important;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+  top: 54px;
+  margin: 0;
+  z-index: 1002;
+}
+
+.right-container {
+  z-index: 0;
+  margin: 30px 10px 0 10px;
+  transition: all .5s;
+  /* transform: translateX(0px);*/
+  opacity: 1;
+}
+
+.right-container .noresult{
+  width: 350px;
+  height: 130px;
+  margin: 0 auto;
+  opacity: 1;
+  margin-top: 80px;
+  text-align: center;
+  color: #bdc0c5;
+  border-bottom: 1px solid #bdc0c5;
+  i{
+    font-size: 70px;
+    color:$red;
+  }
+}
+
+.mar-left180{
+  margin-left: 180px !important;
+}
+
+.right-panel.out {
+  /*transform: translateX(50px);*/
+  opacity: 0;
+}
+
+.navigation .projectItem {
+  //padding: 10px 12px 10px 20px;
+  background: $darkGrey;
+  color: $gray4;
+  line-height: 46px;
+  height: 46px;
+  padding: 0 5px 0 20px;
+  position: relative;
+  transition: .5s;
+  cursor: pointer;
+  display: block;
+  text-decoration: none !important;
+  display:block;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+.navigation .projectItem:before {
+  content: " ";
+  position: absolute;
+  width: 0px;
+  left:0;
+  top: 50%;
+  bottom: 50%;
+  background: $red;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.navigation .projectItem:hover:before,.navigation .active:before {
+  top: 0;
+  bottom: 0;
+}
+
+.navigation .projectItem i {
+  /*border: 1px solid $gray;
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;*/
+  margin-right: 12px;
+  display: inline-block;
+  text-align: center;
+  transition: all .3s;
+}
+
+.navigation .projectItem:hover,.navigation .active {
+  background: $darkGrey3;
+  i{
+    //border: 1px solid $red;
+    color:$red;
+  }
+}
